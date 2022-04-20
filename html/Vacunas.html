@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    
+</head>
+<body>
+    <script src="../js/scripts.js"></script>
+    <div class="header container-fluid px-3 py-3">
+        <nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar border_nav">
+            <div class="container">
+                <a class="navbar-brand fs-1 fw-bold titulop_log" href="#">PetLer</a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class="navbar-collapse collapse" id="navbarTogglerDemo02" >
+                    <div class="wow" data-wow-repeat="1" data-wow-duration="1s" style="visibility: visible;animation-duration: 1s; animation-name: flipInx;">
+                        <ul class="navbar-nav ml-auto" style="border-left: 1px solid #0cbcf0; margin-left: 10px; padding-left:15px;">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/html/Intro.html">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vacunas</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex ms-auto">
+                        <div class="wow" data-wow-delay="5s" data-wow-repeat="1" data-wow-duration="1" style="visibility: visible; animation-duration:1s; animation-delay: 5s; animation-name: headShake;">
+                            <a href="html/ingresar.html" class="btn btn-lg px-4 me-md-3" style="margin: 15px;" role="button">Ingresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        
+            <div class="contll">
+
+                <h1 class="h1I">Información de tu mascota</h1>
+                <label for="" id="labl">Nombre: </label>
+                <input type="text" id="namePet">
+                <br><br><br>
+                <label for="" >Edad: </label>
+                <input type="text" id="age">
+                <br><br><br>
+                <label for="" >Raza:</label>
+                <input type="text" id="raza"><br><br>
+                <label for="">Tamaño: Ch/Mn/Gd</label>
+                <input type="text" name="" id="size"><br><br>
+
+                <button onclick="save()" >Guardar</button>
+                
+            </div>
+            <ul id="resultado">
+                <li></li>
+            </ul>
+        
+        
+    </main>
+
+    <footer class="">
+        <div class="">
+            <img class="" src="" alt="">
+        </div>
+    </footer>
+</body>
+</html>
