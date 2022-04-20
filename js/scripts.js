@@ -101,7 +101,7 @@ function seleccion(n){
 
 const storageElements = localStorage.getItem('inPet') ;
 let inPet=[];
-
+console.log(typeof storageElements)
 if (storageElements){
     inPet = JSON.parse(storageElements);
 }
@@ -131,10 +131,10 @@ function save(){
     agepp.value ='';
     razz.value ='';
     sizz.value = '';
-    
-    localStorage.setItem('inPet',JSON.stringify(inPet))
     render();
-    console.log(inPet)
+    localStorage.setItem('inPet', JSON.stringify(inPet))
+    
+    
 }
 
 function render(){
@@ -142,11 +142,19 @@ function render(){
     container.innerHTML='';
 
 
-    for (const element of inPet) {
-        const item =document.createElement('p');
-        item.textContent=element;
-        console.log(element.toString());
+    //var foo = inPet.map(function(bar))
+    //{
+     //   return ''<li>+bar.
+   // }
+    
+    
+    for (const elemen of inPet) {
+        const item =document.createElement('li');
+        const contenido= document.createTextNode("NOMBRE: "+ elemen.Nombre + "  EDAD: "+ elemen.Edad + "  RAZA: " +elemen.Raza + "  TAMAÑO: " + elemen.Tamaño);
+        console.log(inPet)
+        //item.textContent=element;
         container.appendChild(item);
-    }    
+        item.appendChild(contenido);
+    }  
 }
 
