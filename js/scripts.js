@@ -150,11 +150,17 @@ function render(){
     
     for (const elemen of inPet) {
         const item =document.createElement('li');
+        item.addEventListener('click',(e)=>{
+            e.target.remove();
+            const index = inPet.findIndex((el)=> el=== e.target.createTextNode)
+            inPet.splice(index,1);
+            localStorage.setItem('inPet', JSON.stringify(inPet))
+        })
         const contenido= document.createTextNode("NOMBRE: "+ elemen.Nombre + "  EDAD: "+ elemen.Edad + "  RAZA: " +elemen.Raza + "  TAMAÑO: " + elemen.Tamaño);
-        console.log(inPet)
-        //item.textContent=element;
+        console.log(inPet);
         container.appendChild(item);
         item.appendChild(contenido);
     }  
 }
 
+        
